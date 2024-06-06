@@ -1,0 +1,29 @@
+img {
+    height: 500px;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+div {
+    text-align: center;
+    
+}
+
+body {
+    background-color: aqua;
+    
+}
+
+button {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+}

@@ -1,0 +1,23 @@
+button {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+body {
+    background-color: aqua;
+    
+}
+
+form{
+    text-align: center;
+}
