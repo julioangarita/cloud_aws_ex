@@ -9,11 +9,11 @@
     </head>
     <body>
         <h1>Register Users</h1>
-        <form>
-            <label>Identification</label> <input type="number" /><br><br>
-            <label>Name</label> <input type="text" /><br><br>
-            <label>LastName</label> <input type="text" /><br><br>
-            <label>Birthday</label> <input type="date" /><br><br>
+        <form action = "/register_user" method = "post">
+            <label>Identification</label> <input type="number" name="id" /><br><br>
+            <label>Name</label> <input type="text" name="name"  /><br><br>
+            <label>LastName</label> <input type="text" name="lastname" /><br><br>
+            <label>Birthday</label> <input type="date" name = "birthday" /><br><br>
             <button onClick="registerUser()">Register</button>
             
         </form>
