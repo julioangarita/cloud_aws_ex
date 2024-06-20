@@ -25,5 +25,15 @@ def func_consult_user():
     obj_user = request.get_json()
     id = obj_user["id"]
     passw = obj_user["passw"] #es solo para pruebas no se utiliza
-    consult_user(id)
-    return "OK"
+    result_data = consult_user(id)
+    response = ""
+    if result_data != False and len(result_data) != 0:
+        response = {
+            'status': "ok",
+            'name': result_data[0][1]
+        }
+    else:
+        response = {
+            'status':"error"
+        }
+    return response
