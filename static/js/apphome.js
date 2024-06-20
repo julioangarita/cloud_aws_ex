@@ -1,8 +1,8 @@
-function registerPage(){
+function register(){
     window.location = "/register_page" 
   
 }
-function consultPage(){
+function consult(){
     window.location = "/consult_page"
     
 }
