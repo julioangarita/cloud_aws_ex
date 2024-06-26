@@ -21,7 +21,8 @@ def func_register_user():
     if confirm_user:
         s3_resource = connection_s3() #linea nueva S3 agregada
         photo_path_local = save_file(photo)
-        confirm_photo = upload_file(s3_resource, photo_path_local)
+        confirm_photo = upload_file(s3_resource, photo, photo_path_local, id)
+        print(photo.filename)
         if confirm_photo:
             return "<h1>The user and the photo were saved succesfully</h1>"
         else:

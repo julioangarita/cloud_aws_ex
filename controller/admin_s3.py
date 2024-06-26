@@ -23,10 +23,12 @@ def save_file(photo):
         print("Error", err)
         return None
         
-def upload_file(s3_resource, photo_path_local):
+def upload_file(s3_resource, photo, photo_path_local, id):
     try:
         bucket_name = "myaws-cym-ex" #nombre del bucket creado
-        photo_path_dest = "images/" + "photo.JPG"
+        photo_name = photo.filename
+        photo_extension = photo_name.split(".")[1]
+        photo_path_dest = "images/" + id + "." + photo_extension
         bucket_connection = s3_resource.meta.client.upload_file(photo_path_local, bucket_name, photo_path_dest)
         print("File uploaded")
         return True
