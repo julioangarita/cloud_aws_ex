@@ -15,11 +15,13 @@ function consult_user() {
             document.getElementById("txt-data").value = "Nombre: " + data.name 
             + "\n" + "Lastname: " + data.lastname
             + "\n" + "Birthday: " + data.birthday
-            + "\n" + "Photo: " + data.photo
+            
+            document.getElementById("img-user").src = data.photo
         }
         else {
             alert ("Usuario no encontrado")
             document.getElementById("txt-data").value =""
+            document.getElementById("img-user").src = ""
         }
         
     })
