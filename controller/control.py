@@ -40,19 +40,20 @@ def func_consult_user():
         if file_found != None:
             url_file = "https://myaws-cym-ex.s3.amazonaws.com/"  + file_found
             print(url_file)
-            response = {
-                'status': "okkkk",
-                'name': result_data[0][1],
-                'photo': url_file
-            }
         else:
-             response = {
-                'status': "ok",
-                'name': result_data[0][1],
-                'photo': ""
+            url_file = ""
+        response = {
+            'status': "ok",
+            'name': result_data[0][1],
+            'lastname': result_data[0][2],
+            'birthday': result_data[0][3],
+            'photo': url_file
             }
     else:
-        response = {
-            'status':"errorrrrr"
-        }
+         response = {
+                'status': "error",
+
+            }
+    
+        
     return response
